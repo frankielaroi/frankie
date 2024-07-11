@@ -1,11 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SupabaseService } from '../supabase.service';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-foods',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,ProgressSpinnerModule],
   templateUrl: './foods.component.html',
   styleUrls: ['./foods.component.css']
 })

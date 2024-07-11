@@ -14,11 +14,29 @@ export class SupabaseService {
     this.supabase = supabase;
   }
 
+  async getShopItems(): Promise<any[]>{
+    try {
+      const { data, error } = await this.supabase
+        .from("restaurants")
+        .select('*')
+        .limit(4)
+      
+      if (error) {
+        console.error("Error Fetching Resturants", error)
+        return []
+      }
+      return data;
+    } catch (error) {
+      console.error("Error Fetching Resturants", error)
+      return []
+    }
+  }
   async getFoodItems(): Promise<any[]> {
     try {
       const { data, error } = await this.supabase
         .from('food_items')
-        .select('*');
+        .select('*')
+        .limit(4);
 
       if (error) {
         console.error('Error fetching food items:', error);

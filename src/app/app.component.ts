@@ -1,3 +1,4 @@
+import { ResturantsComponent } from './resturants/resturants.component';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
@@ -7,7 +8,7 @@ import { FoodsComponent } from './foods/foods.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HeaderComponent,HeroComponent,FoodsComponent],
+  imports: [RouterOutlet,HeaderComponent,ResturantsComponent,HeroComponent,FoodsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
