@@ -1,3 +1,4 @@
+import { ReccomendationsComponent } from './reccomendations/reccomendations.component';
 import { ResturantsComponent } from './resturants/resturants.component';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
@@ -9,7 +10,7 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HeaderComponent,ResturantsComponent,SearchbarComponent,HeroComponent,FoodsComponent],
+  imports: [RouterOutlet,HeaderComponent,ResturantsComponent,SearchbarComponent,HeroComponent,ReccomendationsComponent,FoodsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
